@@ -1,6 +1,157 @@
+@import "partials/setup";
+@import "partials/variables";
+@import "partials/typography";
+@import "partials/mixins";
 @import "components/header";
 @import "components/footer";
 
-body {
-    background: red;
+
+* {
+    margin: 0;
+    padding: 0;
+    // border: 1px solid navy;
 }
+
+// GENERAL STYLES
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// ABOUT SECTION
+
+.aboutTitle {
+    background-image: url("/images/plantBackground.png");
+    background-repeat: no-repeat;
+}
+
+// POPULAR PRODUCTS SECTION
+
+.popularProductsHeader {
+    max-width: 34%;
+    margin: 0 auto;
+}
+
+.popularProductsMenu {
+    @include flex;
+    justify-content: space-around;
+    div {
+        max-width: 33%;
+    }
+}
+
+.popularProductsGallery ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ribbonHot {
+    @include ribbon($hot);
+}
+
+.ribbonSale {
+    @include ribbon($sale);
+}
+
+.ribbonNew {
+    @include ribbon($new);
+}
+
+.productOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(26, 26, 38, 0.5);
+    visibility: hidden;
+    // transition: all 0.5s ease;
+    // WHAT TRANSITION
+    @include flex;
+    form {
+    width: 120px;
+    height: 40px;
+    background: #ffffff;
+    @include flex;
+    text-transform: uppercase;
+        button {
+            color: $secondary;
+            border: none;
+            background: #ffffff;
+        }
+    }
+}
+
+li:hover .productOverlay {
+    visibility: visible;
+}
+
+.productImageGroup {
+    position: relative;
+}
+
+.ribbonsOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    p {
+        color: #fefeff;
+    }
+}
+
+.productText p {
+    color: $primary;
+    text-align: center;
+    line-height: 2;
+    span {
+        color: $secondary;
+        text-decoration: line-through;
+        padding-left: 14px;
+    }
+}
+ 
+
+// FEATURETTES SECTION
+
+.customerTestimonials,
+.featuredVideo {
+    width: 50%;
+}
+
+// BLOG SECTION
+
+
+// NEWSLETTER SECTION
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Portrait tablet and small desktops */
+
+@media (max-width: 940px) {}
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {}
+
+/* Landscape phones and down */
+
+@media (max-width: 480px) {}

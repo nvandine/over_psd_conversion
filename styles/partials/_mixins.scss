@@ -1,0 +1,20 @@
+@mixin ribbon($ribbonColor) { 
+    height: 20px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: $ribbonColor;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fefeff;
+    z-index: 20;
+}
+
+@mixin fonts {
+
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,47 @@
+html {
+    font-size: 10px;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $basefont;
+    color: $primary;
+    font-size: $fontSize;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+h4 {
+
+}
+
+h5 {
+    text-transform: capitalize;
+    color: $primary;
+}
+
+p {
+    color: $secondary;
+}
+
+.mainMenu a,
+.aboutQuoteAttribution p {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+// @font-face {
+//     font-family: PressStyle;
+//     src: url('PressStyle.woff');
+// }

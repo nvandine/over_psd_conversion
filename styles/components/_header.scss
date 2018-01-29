@@ -1,3 +1,97 @@
 header {
     width: 100%;
 }
+
+.headerNav,
+.headerNav ul,
+.headerLogo {
+    @include flex; 
+}
+
+.mainMenu, 
+.headerLogo,
+.headerIcons {
+    width: 33.33%;
+}
+
+.mainMenu ul {
+    justify-content: space-between;
+}
+
+.headerIcons ul {
+    justify-content: flex-start;
+    a {
+        margin-right: 15px;
+        color: $primary;
+        display: block;
+    }
+}
+
+.cartIcon {
+    position: relative;
+}
+
+.cartNumber {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $tertiary; 
+    position: absolute; 
+    top: -3px;
+    @include flex;
+    p {
+        font-size: 10px;
+        color: $primary;
+    }
+}
+
+.heroCarousel {
+    background-image: url("/images/headerHero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    // object-fit: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .heroArrows {
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+}
+
+.heroText {
+    h2 {
+        padding-top: 36%;
+    }
+}
+
+.heroAction {
+    background: $action;
+    width: 180px;
+    height: 60px;
+    @include flex;
+    // padding-bottom: 28%;
+    p {
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}
+
+.indicatorContainer {
+    // max-width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $primary;
+    }
+}
