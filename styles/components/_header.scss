@@ -2,6 +2,8 @@ header {
     width: 100%;
 }
 
+// header Nav
+
 .headerNav,
 .headerNav ul,
 .headerLogo {
@@ -12,6 +14,10 @@ header {
 .headerLogo,
 .headerIcons {
     width: 33.33%;
+}
+
+.mainMenu a {
+    color: $primary;
 }
 
 .headerLogo {
@@ -40,7 +46,7 @@ header {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: $tertiary; 
+    background-color: $quaternary; 
     position: absolute; 
     top: -3px;
     left: 10px;
@@ -51,31 +57,27 @@ header {
     }
 }
 
+// header Hero
+
 .heroCarousel {
     background-image: url("/images/headerHero.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    // object-fit: cover;
+    height: 100vh;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    @include flexCol;
     .heroArrows {
         width: 100%;
+        padding: 0 20px;
         display: flex;
         flex-direction:row;
         justify-content: space-between;
     }
 }
 
-.heroText {
-    h2 {
-        padding-top: 36%;
-    }
-    h1 {
-        text-transform: capitalize;
-    }
+.heroText h2 {
+        color: $secondary; 
 }
 
 .heroAction {
@@ -83,7 +85,7 @@ header {
     width: 180px;
     height: 60px;
     @include flex;
-    margin-bottom: 28%;
+    // margin-bottom: 28%;
     p {
         text-transform: uppercase;
         color: #ffffff;
@@ -91,18 +93,26 @@ header {
         font-size: 1.6rem;
     }
 }
+.carouselSlideIndicator {
+    position: absolute;
+    bottom: 20px;
+    .indicatorContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-self: flex-end;
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $primary;
+            margin: 5px 5px 20px;
+        } 
+    }    
+}
 
-.indicatorContainer {
-    // max-width: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 80px;
-    .indicator {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: $primary;
-        margin: 5px 5px 20px;
-    }
+
+// REVISIT THIS
+.indicator:nth-of-type(2) {
+    background-color: $secondary;
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Over - The Home of Interior Plants</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,600i,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500, 600,600i,700,800" rel="stylesheet">
     <script src="https://use.fontawesome.com/0af50bdd5c.js"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -21,13 +21,13 @@
                             <a href="#">home</a>
                         </li>
                         <li>
-                            <a href="#">about</a>
+                            <a href="#about">about</a>
                         </li>
                         <li>
                             <a href="#">pages</a>
                         </li>
                         <li>
-                            <a href="#">shop</a>
+                            <a href="#shop">shop</a>
                         </li>
                         <li>
                             <a href="#blog">blog</a>
@@ -66,10 +66,10 @@
             </div>
         </div>
         <div class="heroCarousel">
-            <!-- Hero image here or background image? -->
+            <!-- BACKGROUND IMAGE -->
             <div class="heroText">
                 <h2>over collections 2017</h2>
-                <h1>living & styling with plants</h1>
+                <h1>living &amp; styling with plants</h1>
             </div>
             <div class="heroArrows">
                 <div><img src="images/leftArrow.png" alt="left arrow"></div>
@@ -86,13 +86,12 @@
                     <div class="indicator"></div>
                     <div class="indicator"></div>
                     <div class="indicator"></div>
-                </div>
-                
+                </div> 
             </div>
         </div>
     </header>
     <main>
-        <section class="about wrapper">
+        <section id="about" class="about wrapper">
             <div class="aboutHeader">
                 <div class="aboutTitle">
                     <h5>welcome to</h5>
@@ -107,45 +106,48 @@
                 </div>
             </div>
             <div class="plantTypesGallery">
-                <div class="TypesGalleryItem">
+                <div class="typesGalleryItem">
                     <img src="images/airPlants.png" alt="air plant">
                     <div class="galleryOverlay">
                         <h3>air plants</h3>
                         <p>12 items</p>
                     </div>
                 </div>
-                <div class="TypesGalleryItem">
+                <div class="typesGalleryItem">
                     <img src="images/officePlants.png" alt="hanging plant">
                     <div class="galleryOverlay">
                         <h3>office plants</h3>
                         <p>38 items</p>
                     </div>
                 </div>
-                <div class="TypesGalleryItem">
+                <div class="typesGalleryItem">
                     <img src="images/housePlants.png" alt="plant in terrarium">
                     <div class="galleryOverlay">
                         <h3>house plants</h3>
                         <p>21 items</p>
                     </div>
                 </div>
-                <div class="TypesGalleryItem">
+                <div class="typesGalleryItem">
                     <img src="images/plantContainers.png" alt="two potted plants">
                     <div class="galleryOverlay">
                         <h3>plant containers</h3>
                         <p>07 items</p>
                     </div>
                 </div>
-                <!-- <div class="plantGalleryPrimary">
-
-                </div> -->
-                <!-- <div class="plantGallerySecondary">
-
-                </div> -->
             </div>
         </section>
-        <section class="popularProducts wrapper">
+
+        <!-- ABOUT - GALLERY SECTION ENDS -->
+        <!-- POPULAR PRODUCTS SECTION STARTS -->
+
+        <section id="shop" class="popularProducts wrapper">
             <div class="popularProductsHeader">
                 <h2>popular products</h2>
+                <div class="divider">
+                    <div class="third"></div>
+                    <div class="third"></div>
+                    <div class="third"></div>
+                </div>
                 <div class="popularProductsMenu">
                     <div>
                         <a href="#">
@@ -419,6 +421,10 @@
                 </ul>
             </div>
         </section>
+
+        <!-- POPULAR PRODUCTS SECTION ENDS -->
+        <!-- FEATURETTES SECTION BEGINS -->
+
         <section class="featurettes">
             <div class="customerTestimonials">
                 <div class="testimonialText">
@@ -430,12 +436,18 @@
                     <p class="testimonialName">rosinante brook . web design</p>
                 </div>
                 <div class="testimonialSlideIndicators">
-
+                    <div class="testimonialIndicator"></div>
+                    <div class="testimonialIndicator"></div>
+                    <div class="testimonialIndicator"></div>
+                    <div class="testimonialIndicator"></div>
                 </div>
             </div>
             <div class="featuredVideo">
                 <div class="playButton">
-
+                    <div class="innerButton">
+                        <i class="fa fa-play fa-2x"></i>
+                        <span class="visuallyhidden">Play Button</span>
+                    </div>
                 </div>
                 <div class="videoTitle">
                     <img src="images/plantsForVideo.png" alt="plants store">
@@ -447,9 +459,18 @@
                 </div>
             </div>
         </section>
+        
+        <!-- FEATURETTES SECTION ENDS -->
+        <!-- BLOG SECTION BEGINS -->
+
         <section class="blog wrapper" id="blog">
             <div class="blogHeader">
                 <h2>from our blog</h2>
+                <div class="divider">
+                    <div class="third"></div>
+                    <div class="third"></div>
+                    <div class="third"></div>
+                </div>
             </div>
             <div class="blogPosts">
                 <div class="post">
@@ -490,9 +511,18 @@
                 </div>
             </div>
         </section>
+
+        <!-- BLOG SECTION ENDS -->
+        <!-- NEWSLETTER SECTION BEGINS -->
+
         <section class="newsletter wrapper">
             <div class="newsletterHeader">
                 <h2>sign up for newsletter</h2>
+                <div class="divider">
+                    <div class="third"></div>
+                    <div class="third"></div>
+                    <div class="third"></div>
+                </div>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem
                     lacinia quam venenatis vestibulum.</p>
             </div>
@@ -500,9 +530,17 @@
                 <form action="sendEmail.php">
                     <label for="email" class="visuallyhidden">Email</label>
                     <input type="email" name="email" placeholder="Enter your email">
+                    <label for="submit" class="visuallyhidden">Submit</label>
+                    <button class="submit"><i class="fa fa-envelope-o fa-lg"></i>
+                    </button>
                 </form>
+                
             </div>
         </section>
+
+        <!-- NEWSLETTER SECTION ENDS -->
+        <!-- PARTNERS SECTION BEGINS -->
+
         <section class="partners wrapper">
             <img src="/images/partnerAuthentic.png" alt="Authentic Athletics partner logo">
             <img src="/images/partnerDrewville.png" alt="Drewville partner logo">
@@ -510,13 +548,17 @@
             <img src="/images/partnerYourkshire.png" alt="Yourkshire partner logo">
             <img src="/images/partnerLuigiano.png" alt="Luigiano partner logo">
         </section>
+
+        <!-- PARTNERS SECTION ENDS -->
+
     </main>
+        <!-- MAIN ENDS -->
+        <!-- FOOTER BEGINS -->
+        
     <footer>
         <div class="footerMain wrapper">
             <div class="footerContact">
-                <div>
-                    <img src="/images/Logo.png" alt="Over logo">
-                </div>
+                <img src="/images/Logo.png" alt="Over logo">
                 <div>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare
                         sem lacinia quam venenatis vestibulum.
@@ -542,42 +584,40 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook"></i>
-                                    <span class="visuallyhidden">Facebook</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    <span class="visuallyhidden">Twitter</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-google-plus"></i>
-                                    <span class="visuallyhidden">Google Plus</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-instagram"></i>
-                                    <span class="visuallyhidden">Instagram</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-pinterest-p"></i>
-                                    <span class="visuallyhidden">Pinterest</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                                <span class="visuallyhidden">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                                <span class="visuallyhidden">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-google-plus"></i>
+                                <span class="visuallyhidden">Google Plus</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                                <span class="visuallyhidden">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-pinterest-p"></i>
+                                <span class="visuallyhidden">Pinterest</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="footerServices">
                 <div class="footerHeading">
@@ -592,7 +632,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <p>term & conditions</p>
+                                <p>term &amp; conditions</p>
                             </a>
                         </li>
                         <li>
@@ -602,7 +642,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <p>shipping rates & policies</p>
+                                <p>shipping rates &amp; policies</p>
                             </a>
                         </li>
                         <li>
@@ -698,10 +738,9 @@
                 </p>
             </div>
             <div class="help">
-                <p>Any question? let us help you. Call us:
+                <p>Any question? Let us help you. Call us:
                     <span class="help">+(1200) 989 169 092</span>
                 </p>
-
             </div>
         </div>
     </footer>

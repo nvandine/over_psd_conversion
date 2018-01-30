@@ -1,11 +1,108 @@
-footer {
-    border-top: 1px solid #e6e5e1;
-    border-bottom: 1px solid #e6e5e1;
+.footerMain {
+    border-top: 2px solid #e6e5e1;
+    border-bottom: 2px solid #e6e5e1;
+    p {
+        text-transform: capitalize;
+    }
+    a {
+        display: block;
+    }
 }
 
-// footerFooter
+.footerHeading {
+    margin-bottom: 30px;
+}
+
+.footerHeading::after {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 2px solid $quaternary;
+    margin-top: 10px;
+}
 
 .footerMain {
     display: flex;
     flex-direction: row;
+    padding-top: 100px;
+    justify-content: space-between;
+}
+
+.footerContact {
+    max-width: 40%;
+    img,
+    div {
+        margin-bottom: 40px;
+    }
+        p {
+            text-transform: none;
+            span {
+                font-weight: $semiBold;
+                color: $primary;
+            }
+        }
+    nav ul {
+       display: flex;
+       justify-content: flex-start;
+       margin-bottom: 50px;
+        li {
+            margin-right: 20px;
+        }
+            a{
+                color: $primary;
+            }
+    }
+}
+.footerContact li,
+.footerServices li,
+.footerAccount li {
+    margin-bottom: 10px;
+}
+
+
+.footerServices,
+.footerAccount {
+    max-width: 17%;
+}
+
+.footerInstagram {
+    max-width: 25%;
+    .instagramGallery {
+        @include flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        a {
+            max-width: 33%;
+            margin-top: 10px;   
+        }
+    }
+    .creditCards {
+        @include flex;
+        justify-content: flex-start;
+        img {
+            margin-right: 15px;
+        }
+    }
+}
+
+// footerFooter
+
+.footerFooter {
+    @include flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    p {
+        letter-spacing: 0.2px;
+        span {
+            font-weight: $med;
+            color: $primary;
+        }
+    }
+}
+
+span.over {
+    text-transform: uppercase;
+    font-weight: $reg;
+    color: $secondary;
 }

@@ -9,7 +9,7 @@
 * {
     margin: 0;
     padding: 0;
-    // border: 1px solid navy;
+    // border: 1px solid rgb(250, 234, 194);
 }
 
 // GENERAL STYLES
@@ -32,15 +32,113 @@ a {
     text-decoration: none;
 }
 
+.divider {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .third {
+        height: 2px;
+        width: 40px;
+        background-color: $quaternary;
+    }
+}
+
+.divider .third:nth-child(even) {
+    background-color: #f5efef;
+}
+
+
 // ABOUT SECTION
 
-.aboutTitle {
+.aboutHeader {
+    padding-top: 70px;
+    .aboutTitle {
     background-image: url("/images/plantBackground.png");
     background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 0 50px 0;
+    @include flexCol;
+        h5 {
+            color: $quaternary;
+            text-align: center;
+        }
+    }
+    .aboutText {
+        max-width: 66.66%;
+        text-align: center;
+        margin: 35px auto;
+        .aboutQuoteAttribution {
+            margin: 20px 0;
+            p {
+                color: $primary;
+                letter-spacing: 0.7px;
+                span {
+                    color: $secondary;
+                    font-style: italic;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
 }
+
+ 
+
+.plantTypesGallery {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 40%, 28%, 28%;
+    grid-template-areas: 
+        "air office house"
+        "air container container";
+}
+
+.typesGalleryItem:first-child {
+    grid-area: air;
+}
+
+.typesGalleryItem:nth-child(2) {
+    grid-area: office;
+}
+
+.typesGalleryItem:nth-child(3) {
+    grid-area: house;
+}
+
+.typesGalleryItem:last-child {
+    grid-area: container;
+}
+
+
+.typesGalleryItem {
+    position: relative;
+    display: inline-block;
+    @include flex;
+    .galleryOverlay {
+        position: absolute;
+        height: 90px;
+        width: 220px;
+        background: $tertiary;
+        text-align: center;
+        h3 {
+            text-transform: capitalize;
+            color: $primary;
+            margin-top: 22px;
+        }
+        p {
+            color: $secondary;
+        }
+    }
+}
+
+
 
 // POPULAR PRODUCTS SECTION
 
+.popularProducts {
+    padding-top: 100px;
+}
 .popularProductsHeader {
     max-width: 34%;
     margin: 0 auto;
@@ -59,6 +157,9 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    li {
+        margin: 10px 0;
+    }
 }
 
 .ribbonHot {
@@ -68,7 +169,6 @@ a {
 .ribbonSale {
     @include ribbon($sale);
 }
-
 .ribbonNew {
     @include ribbon($new);
 }
@@ -87,13 +187,13 @@ a {
         form {
         width: 120px;
         height: 40px;
-        background: #ffffff;
+        background: $tertiary;
         @include flex;
         text-transform: uppercase;
             button {
                 color: $secondary;
                 border: none;
-                background: #ffffff;
+                background: $tertiary;
             }
         }
 }
@@ -130,17 +230,17 @@ li:hover .productOverlay {
 // FEATURETTES SECTION
 
 .featurettes {
-    @include flex;
+    // @include flex;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
     // margin-top: none;
 }
 
 .customerTestimonials,
 .featuredVideo {
     width: 50%;
-    // height: auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexCol;
 }
 
 .customerTestimonials {
@@ -148,17 +248,21 @@ li:hover .productOverlay {
     background-repeat: no-repeat;
     background-size: cover;
     .testimonialText {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
+        @include flexCol;
         width: 90%;
         padding: 30px;
         .testimonial {
-            line-height: 1.5;
+            line-height: 1.7 ;
             text-align: center;
             margin-top: 30px;
+            font-weight: $med;
+            font-style: italic;
+            color: $primary;
         }  
-
+        .testimonialName {
+            text-transform: uppercase;
+            padding-bottom: 10px;
+        }
     }
 }
 .testimonialName,
@@ -167,43 +271,134 @@ li:hover .productOverlay {
     margin-top: 30px;
 }
 
-.featuredVideo {
-    background-image: url("/images/plantStoreVideoStill.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+.testimonialSlideIndicators {
+    @include flex;
+    .testimonialIndicator {
+        height: 40px;
+        width: 40px;
+        background-color: $secondary;
+        border-radius: 50%;
+        margin: 8px;
+    }
+    .testimonialIndicator:nth-child(2) {
+        height: 60px;
+        width: 60px;
+        // border: 3px solid rgba(136, 136, 144, 0.5);
+        box-shadow: 0 0 0 3px rgba(136, 136, 144, 0.4);
+    }
 }
 
+.featuredVideo {
+    background-image: linear-gradient(rgba(26, 26, 38, 0.5)), url("/images/plantStoreVideoStill.png")
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .videoTitle {
+        @include flex;
+        margin: 20px 0;
+        img {
+            margin: 0 10px;
+        }
+    }
+    p {
+        color: $tertiary;
+        text-transform: uppercase;
+        padding-bottom: 186px;
+    }
+}
+
+.playButton {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: $action-outer;
+    @include flex;
+    margin-top: 197px;
+    .innerButton {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background: $action;
+        @include flex;
+        i {
+            color: $tertiary;
+        }
+    }
+
+}
 
 // BLOG SECTION
 
-.blogPosts {
-    @include flex;
-    justify-content: space-between;
-        .post {
-            width: 33.33%;
-        }
+.blog {
+    margin-top: 60px;
+    .blogPosts {
+        // @include flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+            .post {
+                width: 33.33%;
+            }
+    }
 }
 
-
+.blogText {
+   text-transform: capitalize;
+   p {
+       margin-top: 10px;
+   }
+   h4 {
+       letter-spacing: 0.7px;
+       padding: 10px 50px 10px 0;
+   }
+   a {
+       display: block;
+       p {
+           display: inline-block; 
+           border-bottom: 1px solid $primary;
+        //    text-decoration: underline;
+           color: $primary;
+           font-weight: $med;
+           
+       }
+   }
+}
 
 // NEWSLETTER SECTION
 
-.newsletterHeader {
-    max-width: 50%;
-    margin: 0 auto;
-    text-align: center;
+.newsletter {
+    margin-top: 60px;
+    .newsletterHeader {
+        max-width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
 }
 
 .newsletterForm {
-    max-width: 72%;
+    max-width: 75%;
+    margin: 40px auto;
+    border-bottom: 1px solid $secondary;
+    position: relative;
+    input[type=email] {
+        padding: 10px 0;
+        border: none;
+    }
+    button {
+        border: none;
+        background-color: $tertiary;
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+    }
 }
 
 // PARTNERS
 .partners {
     @include flex;
     justify-content: space-between;
-    padding-top: 106px;
-    padding-bottom: 207px;
+    padding: 100px 0;
 }
 
 
