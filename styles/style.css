@@ -197,22 +197,26 @@ header {
 .headerIcons {
   width: 33.33%; }
 
+.headerLogo {
+  padding: 36px 0; }
+
 .mainMenu ul {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .headerIcons ul {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
   .headerIcons ul a {
-    margin-right: 15px;
+    margin-left: 30px;
     color: #1a1a26;
     display: block; }
 
 .cartIcon {
-  position: relative; }
+  position: relative;
+  max-height: 100%; }
 
 .cartNumber {
   width: 20px;
@@ -221,6 +225,7 @@ header {
   background-color: #a8edea;
   position: absolute;
   top: -3px;
+  left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,6 +273,9 @@ header {
 .heroText h2 {
   padding-top: 36%; }
 
+.heroText h1 {
+  text-transform: capitalize; }
+
 .heroAction {
   background: #f07f84;
   width: 180px;
@@ -280,7 +288,8 @@ header {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 28%; }
   .heroAction p {
     text-transform: uppercase;
     color: #ffffff;
@@ -296,16 +305,27 @@ header {
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding-top: 80px; }
   .indicatorContainer .indicator {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background-color: #1a1a26; }
+    background-color: #1a1a26;
+    margin: 5px 5px 20px; }
 
 footer {
   border-top: 1px solid #e6e5e1;
   border-bottom: 1px solid #e6e5e1; }
+
+.footerMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 * {
   margin: 0;
@@ -450,9 +470,102 @@ li:hover .productOverlay {
     text-decoration: line-through;
     padding-left: 14px; }
 
+.featurettes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .customerTestimonials,
 .featuredVideo {
-  width: 50%; }
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.customerTestimonials {
+  background-image: url("/images/testimonialBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .customerTestimonials .testimonialText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 90%;
+    padding: 30px; }
+    .customerTestimonials .testimonialText .testimonial {
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 30px; }
+
+.testimonialName,
+.testimonialText h2,
+.testimonialText img {
+  margin-top: 30px; }
+
+.featuredVideo {
+  background-image: url("/images/plantStoreVideoStill.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.blogPosts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .blogPosts .post {
+    width: 33.33%; }
+
+.newsletterHeader {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center; }
+
+.newsletterForm {
+  max-width: 72%; }
+
+.partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 106px;
+  padding-bottom: 207px; }
 
 /* MEDIA QUERIES */
 /* Portrait tablet and small desktops */

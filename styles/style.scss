@@ -49,9 +49,9 @@ a {
 .popularProductsMenu {
     @include flex;
     justify-content: space-around;
-    div {
-        max-width: 33%;
-    }
+        div {
+            max-width: 33%;
+        }
 }
 
 .popularProductsGallery ul {
@@ -84,18 +84,18 @@ a {
     // transition: all 0.5s ease;
     // WHAT TRANSITION
     @include flex;
-    form {
-    width: 120px;
-    height: 40px;
-    background: #ffffff;
-    @include flex;
-    text-transform: uppercase;
-        button {
-            color: $secondary;
-            border: none;
-            background: #ffffff;
+        form {
+        width: 120px;
+        height: 40px;
+        background: #ffffff;
+        @include flex;
+        text-transform: uppercase;
+            button {
+                color: $secondary;
+                border: none;
+                background: #ffffff;
+            }
         }
-    }
 }
 
 li:hover .productOverlay {
@@ -110,36 +110,101 @@ li:hover .productOverlay {
     position: absolute;
     top: 0;
     right: 0;
-    p {
-        color: #fefeff;
-    }
+        p {
+            color: #fefeff;
+        }
 }
 
 .productText p {
     color: $primary;
     text-align: center;
     line-height: 2;
-    span {
-        color: $secondary;
-        text-decoration: line-through;
-        padding-left: 14px;
-    }
+        span {
+            color: $secondary;
+            text-decoration: line-through;
+            padding-left: 14px;
+        }
 }
  
 
 // FEATURETTES SECTION
 
+.featurettes {
+    @include flex;
+    // margin-top: none;
+}
+
 .customerTestimonials,
 .featuredVideo {
     width: 50%;
+    // height: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.customerTestimonials {
+    background-image: url("/images/testimonialBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .testimonialText {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 90%;
+        padding: 30px;
+        .testimonial {
+            line-height: 1.5;
+            text-align: center;
+            margin-top: 30px;
+        }  
+
+    }
+}
+.testimonialName,
+.testimonialText h2,
+.testimonialText img {
+    margin-top: 30px;
+}
+
+.featuredVideo {
+    background-image: url("/images/plantStoreVideoStill.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 // BLOG SECTION
+
+.blogPosts {
+    @include flex;
+    justify-content: space-between;
+        .post {
+            width: 33.33%;
+        }
+}
+
 
 
 // NEWSLETTER SECTION
 
+.newsletterHeader {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
 
+.newsletterForm {
+    max-width: 72%;
+}
+
+// PARTNERS
+.partners {
+    @include flex;
+    justify-content: space-between;
+    padding-top: 106px;
+    padding-bottom: 207px;
+}
 
 
 /* MEDIA QUERIES */

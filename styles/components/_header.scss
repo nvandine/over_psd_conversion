@@ -14,14 +14,18 @@ header {
     width: 33.33%;
 }
 
+.headerLogo {
+    padding: 36px 0;
+}
+
 .mainMenu ul {
     justify-content: space-between;
 }
 
 .headerIcons ul {
-    justify-content: flex-start;
+    justify-content: flex-end;
     a {
-        margin-right: 15px;
+        margin-left: 30px;
         color: $primary;
         display: block;
     }
@@ -29,6 +33,7 @@ header {
 
 .cartIcon {
     position: relative;
+    max-height: 100%;
 }
 
 .cartNumber {
@@ -38,6 +43,7 @@ header {
     background-color: $tertiary; 
     position: absolute; 
     top: -3px;
+    left: 10px;
     @include flex;
     p {
         font-size: 10px;
@@ -67,6 +73,9 @@ header {
     h2 {
         padding-top: 36%;
     }
+    h1 {
+        text-transform: capitalize;
+    }
 }
 
 .heroAction {
@@ -74,7 +83,7 @@ header {
     width: 180px;
     height: 60px;
     @include flex;
-    // padding-bottom: 28%;
+    margin-bottom: 28%;
     p {
         text-transform: uppercase;
         color: #ffffff;
@@ -88,10 +97,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 80px;
     .indicator {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background-color: $primary;
+        margin: 5px 5px 20px;
     }
 }
