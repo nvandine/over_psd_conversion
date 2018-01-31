@@ -16,6 +16,7 @@
 
 .wrapper {
     max-width: 1170px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -83,12 +84,10 @@ a {
     }
 }
 
- 
-
 .plantTypesGallery {
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 40%, 28%, 28%;
+    grid-gap: 15px;
+    grid-template-columns: 4fr 3fr 3fr;
     grid-template-areas: 
         "air office house"
         "air container container";
@@ -121,10 +120,11 @@ a {
         width: 220px;
         background: $tertiary;
         text-align: center;
+        @include flexCol;
         h3 {
             text-transform: capitalize;
             color: $primary;
-            margin-top: 22px;
+            // margin-top: 22px;
         }
         p {
             color: $secondary;
@@ -181,8 +181,6 @@ a {
     right: 0;
     background:rgba(26, 26, 38, 0.5);
     visibility: hidden;
-    // transition: all 0.5s ease;
-    // WHAT TRANSITION
     @include flex;
         form {
         width: 120px;
@@ -250,7 +248,10 @@ li:hover .productOverlay {
     .testimonialText {
         @include flexCol;
         width: 90%;
-        padding: 30px;
+        padding: 15px;
+        img {
+            max-width: 100%;
+        }
         .testimonial {
             line-height: 1.7 ;
             text-align: center;
@@ -258,21 +259,24 @@ li:hover .productOverlay {
             font-weight: $med;
             font-style: italic;
             color: $primary;
+            font-size: 1.2rem;
         }  
         .testimonialName {
             text-transform: uppercase;
-            padding-bottom: 10px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
         }
     }
 }
 .testimonialName,
 .testimonialText h2,
 .testimonialText img {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .testimonialSlideIndicators {
     @include flex;
+    padding-bottom: 40px;
     .testimonialIndicator {
         height: 40px;
         width: 40px;
@@ -295,7 +299,7 @@ li:hover .productOverlay {
     background-size: cover;
     .videoTitle {
         @include flex;
-        margin: 20px 0;
+        margin: 10px 0;
         img {
             margin: 0 10px;
         }
@@ -303,7 +307,9 @@ li:hover .productOverlay {
     p {
         color: $tertiary;
         text-transform: uppercase;
-        padding-bottom: 186px;
+        letter-spacing: 1.1px;
+        font-weight: $light;
+        padding-bottom: 125px;
     }
 }
 
@@ -313,7 +319,7 @@ li:hover .productOverlay {
     border-radius: 50%;
     background: $action-outer;
     @include flex;
-    margin-top: 197px;
+    margin-top: 125px;
     .innerButton {
         height: 80px;
         width: 80px;
@@ -337,9 +343,20 @@ li:hover .productOverlay {
         flex-direction: row;
         justify-content: space-between;
             .post {
-                width: 33.33%;
+                width: calc(33.33%-20px);
+                img {
+                    width: 100%;
+                }
             }
     }
+}
+
+.post:last-child {
+    margin-left: 10px;
+}
+
+.post:first-child {
+    margin-right: 10px;
 }
 
 .blogText {
@@ -406,12 +423,252 @@ li:hover .productOverlay {
 
 /* Portrait tablet and small desktops */
 
-@media (max-width: 940px) {}
+@media (max-width: 940px) {
+    .plantTypesGallery img {
+        max-width: 90%;
+    }
+
+    .typesGalleryItem .galleryOverlay {
+        width: 190px;
+        height: 70px;   
+    }
+
+    .productImageGroup {
+        max-width: 90%;
+    }
+
+    .popularProductsGallery ul {
+        justify-content: space-evenly;
+    }
+
+    .featuredVideo {
+        p {
+            padding-bottom: 100px;
+        }
+        .videoTitle {
+            width: 90%;
+        }
+    }   
+
+    .playButton {
+        height: 80px;
+        width: 80px;
+        margin-top: 100px;
+        .innerButton {
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    .blogText {
+        h4 {
+            padding: 5px 0;
+        }
+    }
+
+    .partners {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 30px 0;
+        img {
+            margin: 30px;
+        }
+    }
+
+    .footerMain {
+        flex-wrap: wrap;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .footerContact {
+        max-width: 90%;
+    }
+
+    .footerServices,
+    .footerAccount {
+        max-width: 30%;
+    }
+
+    .footerInstagram {
+        max-width: 38%;
+    }
+}
 
 /* Landscape phone to portrait tablet */
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+    .headerNav {
+        // @include flexCol;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
 
-/* Landscape phones and down */
+    .headerLogo {
+        order: 1;
+        flex: 1 1 90%;
+    }
 
-@media (max-width: 480px) {}
+    .mainMenu {
+        flex: 2 1 60%;
+        order: 2;
+    }
+
+    .headerIcons {
+        order: 3;
+        flex: 1 1 35%;
+            ul {
+
+            }   
+                a {
+                    margin-left: 20px;
+                }
+    }
+
+    .plantTypesGallery {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+            "air office" 
+            "air house"
+            "air container";
+    }
+
+    .typesGalleryItem:first-child {
+        grid-area: air;
+    }
+
+    .typesGalleryItem:nth-child(2) {
+        grid-area: office;
+    }
+
+    .typesGalleryItem:nth-child(3) {
+        grid-area: house;
+    }
+
+    .typesGalleryItem:last-child {
+        grid-area: container;
+    }
+
+    .popularProductsHeader {
+        max-width: 50%;
+    }
+
+    .featurettes {
+        @include flexCol;
+    }
+
+    .customerTestimonials,
+    .featuredVideo {
+        width: 100%;
+    }
+
+
+    .footerServices,
+    .footerAccount {
+        max-width: 50%;
+    }
+
+    .footerInstagram {
+        max-width: 90%;
+        border-top: 1px solid #e6e5e1;
+        margin-top: 20px;
+        padding-top: 10px;
+        .instagramGallery {
+            justify-content: space-evenly;
+            a {
+                margin: 8px;
+            }
+        }
+        .creditCards {
+            justify-content: center;
+            img {
+                margin: 20px;
+            }
+        }
+    }
+
+    .footerFooter {
+        @include flexCol;
+        text-align: center;
+    }
+}
+
+/* Portrait phones and down */
+
+@media (max-width: 480px) {
+
+.headerNav {
+    @include flexCol;
+}
+
+.plantTypesGallery {
+    @include flexCol;
+    // display: grid;
+    // grid-gap: 15px;
+    // grid-template-columns: 4fr 3fr 3fr;
+    // grid-template-areas: "air office house" "air container container";
+}
+.typesGalleryItem {
+    max-width: 320px;
+    max-height: 100px;
+    margin-bottom: 20px;
+
+}
+// .typesGalleryItem:first-child {
+//     grid-area: air;
+// }
+
+// .typesGalleryItem:nth-child(2) {
+//     grid-area: office;
+// }
+
+// .typesGalleryItem:nth-child(3) {
+//     grid-area: house;
+// }
+
+// .typesGalleryItem:last-child {
+//     grid-area: container;
+// }
+
+    // blog
+
+.blog .blogPosts {
+    @include flexCol;
+}
+
+.blogText {
+    h4 {
+        padding: 5px 0;
+    }
+    a p {
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+}
+
+.productOverlay {
+    visibility: visible;
+}
+
+    // Footer 
+.footerMain {
+    @include flexCol;
+}
+
+// .footerContact,
+// .footerServices,
+// .footerAccount,
+// .footerInstagram {
+//     max-width: 90%;
+// }
+
+.footerFooter {
+    @include flexCol;
+    text-align: center;
+}
+.help {
+    padding: 20px 0;
+}
+}

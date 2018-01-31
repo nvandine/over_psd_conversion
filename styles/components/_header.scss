@@ -10,10 +10,15 @@ header {
     @include flex; 
 }
 
-.mainMenu, 
+ 
 .headerLogo,
 .headerIcons {
-    width: 33.33%;
+    flex: 0 1 33.33%;
+    // width: 33.33%;
+}
+
+.mainMenu {
+    flex: 1 0 33.33%;
 }
 
 .mainMenu a {
@@ -112,7 +117,7 @@ header {
 }
 
 
-// REVISIT THIS
-.indicator:nth-of-type(2) {
+
+.indicatorContainer .indicator:nth-of-type(2) {
     background-color: $secondary;
 }

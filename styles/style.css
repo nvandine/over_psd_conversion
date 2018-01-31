@@ -204,10 +204,16 @@ header {
   -ms-flex-align: center;
   align-items: center; }
 
-.mainMenu,
 .headerLogo,
 .headerIcons {
-  width: 33.33%; }
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 33.33%;
+  flex: 0 1 33.33%; }
+
+.mainMenu {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 33.33%;
+  flex: 1 0 33.33%; }
 
 .mainMenu a {
   color: #1a1a26; }
@@ -332,7 +338,7 @@ header {
       background-color: #1a1a26;
       margin: 5px 5px 20px; }
 
-.indicator:nth-of-type(2) {
+.indicatorContainer .indicator:nth-of-type(2) {
   background-color: #888890; }
 
 .footerMain {
@@ -466,6 +472,7 @@ span.over {
 
 .wrapper {
   max-width: 1170px;
+  width: 90%;
   margin: 0 auto; }
 
 img {
@@ -537,8 +544,8 @@ a {
 
 .plantTypesGallery {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 40%, 28%, 28%;
+  grid-gap: 15px;
+  grid-template-columns: 4fr 3fr 3fr;
   grid-template-areas: "air office house" "air container container"; }
 
 .typesGalleryItem:first-child {
@@ -570,11 +577,23 @@ a {
     height: 90px;
     width: 220px;
     background: #ffffff;
-    text-align: center; }
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .typesGalleryItem .galleryOverlay h3 {
       text-transform: capitalize;
-      color: #1a1a26;
-      margin-top: 22px; }
+      color: #1a1a26; }
     .typesGalleryItem .galleryOverlay p {
       color: #888890; }
 
@@ -782,22 +801,26 @@ li:hover .productOverlay {
     -ms-flex-align: center;
     align-items: center;
     width: 90%;
-    padding: 30px; }
+    padding: 15px; }
+    .customerTestimonials .testimonialText img {
+      max-width: 100%; }
     .customerTestimonials .testimonialText .testimonial {
       line-height: 1.7;
       text-align: center;
       margin-top: 30px;
       font-weight: 500;
       font-style: italic;
-      color: #1a1a26; }
+      color: #1a1a26;
+      font-size: 1.2rem; }
     .customerTestimonials .testimonialText .testimonialName {
       text-transform: uppercase;
-      padding-bottom: 10px; }
+      font-size: 1rem;
+      letter-spacing: 0.5px; }
 
 .testimonialName,
 .testimonialText h2,
 .testimonialText img {
-  margin-top: 30px; }
+  margin-top: 20px; }
 
 .testimonialSlideIndicators {
   display: -webkit-box;
@@ -808,7 +831,8 @@ li:hover .productOverlay {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 40px; }
   .testimonialSlideIndicators .testimonialIndicator {
     height: 40px;
     width: 40px;
@@ -838,13 +862,15 @@ li:hover .productOverlay {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin: 20px 0; }
+    margin: 10px 0; }
     .featuredVideo .videoTitle img {
       margin: 0 10px; }
   .featuredVideo p {
     color: #ffffff;
     text-transform: uppercase;
-    padding-bottom: 186px; }
+    letter-spacing: 1.1px;
+    font-weight: 300;
+    padding-bottom: 125px; }
 
 .playButton {
   height: 100px;
@@ -860,7 +886,7 @@ li:hover .productOverlay {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 197px; }
+  margin-top: 125px; }
   .playButton .innerButton {
     height: 80px;
     width: 80px;
@@ -892,7 +918,15 @@ li:hover .productOverlay {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     .blog .blogPosts .post {
-      width: 33.33%; }
+      width: calc(33.33%-20px); }
+      .blog .blogPosts .post img {
+        width: 100%; }
+
+.post:last-child {
+  margin-left: 10px; }
+
+.post:first-child {
+  margin-right: 10px; }
 
 .blogText {
   text-transform: capitalize; }
@@ -948,5 +982,232 @@ li:hover .productOverlay {
 
 /* MEDIA QUERIES */
 /* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .plantTypesGallery img {
+    max-width: 90%; }
+  .typesGalleryItem .galleryOverlay {
+    width: 190px;
+    height: 70px; }
+  .productImageGroup {
+    max-width: 90%; }
+  .popularProductsGallery ul {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly; }
+  .featuredVideo p {
+    padding-bottom: 100px; }
+  .featuredVideo .videoTitle {
+    width: 90%; }
+  .playButton {
+    height: 80px;
+    width: 80px;
+    margin-top: 100px; }
+    .playButton .innerButton {
+      height: 60px;
+      width: 60px; }
+  .blogText h4 {
+    padding: 5px 0; }
+  .partners {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 30px 0; }
+    .partners img {
+      margin: 30px; }
+  .footerMain {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 20px; }
+  .footerContact {
+    max-width: 90%; }
+  .footerServices,
+  .footerAccount {
+    max-width: 30%; }
+  .footerInstagram {
+    max-width: 38%; } }
+
 /* Landscape phone to portrait tablet */
-/* Landscape phones and down */
+@media (max-width: 767px) {
+  .headerNav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 20px; }
+  .headerLogo {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 90%;
+    flex: 1 1 90%; }
+  .mainMenu {
+    -webkit-box-flex: 2;
+    -ms-flex: 2 1 60%;
+    flex: 2 1 60%;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; }
+  .headerIcons {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 35%;
+    flex: 1 1 35%; }
+    .headerIcons a {
+      margin-left: 20px; }
+  .plantTypesGallery {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "air office"  "air house" "air container"; }
+  .typesGalleryItem:first-child {
+    grid-area: air; }
+  .typesGalleryItem:nth-child(2) {
+    grid-area: office; }
+  .typesGalleryItem:nth-child(3) {
+    grid-area: house; }
+  .typesGalleryItem:last-child {
+    grid-area: container; }
+  .popularProductsHeader {
+    max-width: 50%; }
+  .featurettes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .customerTestimonials,
+  .featuredVideo {
+    width: 100%; }
+  .footerServices,
+  .footerAccount {
+    max-width: 50%; }
+  .footerInstagram {
+    max-width: 90%;
+    border-top: 1px solid #e6e5e1;
+    margin-top: 20px;
+    padding-top: 10px; }
+    .footerInstagram .instagramGallery {
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; }
+      .footerInstagram .instagramGallery a {
+        margin: 8px; }
+    .footerInstagram .creditCards {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .footerInstagram .creditCards img {
+        margin: 20px; }
+  .footerFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; } }
+
+/* Portrait phones and down */
+@media (max-width: 480px) {
+  .headerNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .plantTypesGallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .typesGalleryItem {
+    max-width: 320px;
+    max-height: 100px;
+    margin-bottom: 20px; }
+  .blog .blogPosts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .blogText h4 {
+    padding: 5px 0; }
+  .blogText a p {
+    margin-top: -10px;
+    margin-bottom: 20px; }
+  .productOverlay {
+    visibility: visible; }
+  .footerMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footerFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+  .help {
+    padding: 20px 0; } }
