@@ -197,6 +197,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -217,6 +221,8 @@ header {
 
 .mainMenu a {
   color: #1a1a26; }
+  .mainMenu a:hover, .mainMenu a:focus .mainMenu a:active {
+    color: #888890; }
 
 .headerLogo {
   padding: 36px 0; }
@@ -234,6 +240,8 @@ header {
     margin-left: 30px;
     color: #1a1a26;
     display: block; }
+    .headerIcons ul a:hover, .headerIcons ul a:focus .headerIcons ul a:active {
+      color: #888890; }
 
 .cartIcon {
   position: relative;
@@ -250,6 +258,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -297,6 +309,15 @@ header {
 .heroText h2 {
   color: #888890; }
 
+.heroArrows img {
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+  .heroArrows img:hover, .heroArrows img:focus .heroArrows img:active {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); }
+
 .heroAction {
   background: #f07f84;
   width: 180px;
@@ -304,17 +325,28 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
   .heroAction p {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 600;
     font-size: 1.6rem; }
+  .heroAction:hover, .heroAction:focus .heroAction:active {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
 
 .carouselSlideIndicator {
   position: absolute;
@@ -410,6 +442,10 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -429,6 +465,10 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -445,6 +485,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -550,6 +594,8 @@ a {
 
 .typesGalleryItem:first-child {
   grid-area: air; }
+  .typesGalleryItem:first-child img {
+    height: 100%; }
 
 .typesGalleryItem:nth-child(2) {
   grid-area: office; }
@@ -566,6 +612,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -597,6 +647,15 @@ a {
     .typesGalleryItem .galleryOverlay p {
       color: #888890; }
 
+.galleryOverlay a {
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+  .galleryOverlay a:hover, .galleryOverlay a:focus .galleryOverlay a:active {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+
 .popularProducts {
   padding-top: 100px; }
 
@@ -608,6 +667,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -617,7 +680,10 @@ a {
   -ms-flex-pack: distribute;
   justify-content: space-around; }
   .popularProductsMenu div {
-    max-width: 33%; }
+    max-width: 33%;
+    margin-bottom: 15px; }
+    .popularProductsMenu div:hover, .popularProductsMenu div:focus .popularProductsMenu div:active {
+      border-bottom: 1px solid #1a1a26; }
 
 .popularProductsGallery ul {
   display: -webkit-box;
@@ -648,6 +714,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -669,6 +739,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -690,6 +764,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -709,6 +787,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -722,6 +804,10 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -734,7 +820,8 @@ a {
       border: none;
       background: #ffffff; }
 
-li:hover .productOverlay {
+li:hover .productOverlay,
+li:focus .productOverlay {
   visibility: visible; }
 
 .productImageGroup {
@@ -826,6 +913,10 @@ li:hover .productOverlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -856,6 +947,10 @@ li:hover .productOverlay {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -880,6 +975,10 @@ li:hover .productOverlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -892,9 +991,16 @@ li:hover .productOverlay {
     width: 80px;
     border-radius: 50%;
     background: #f07f84;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -903,6 +1009,10 @@ li:hover .productOverlay {
     align-items: center; }
     .playButton .innerButton i {
       color: #ffffff; }
+    .playButton .innerButton:hover, .playButton .innerButton:focus .playButton .innerButton:active {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2); }
 
 .blog {
   margin-top: 60px; }
@@ -946,7 +1056,7 @@ li:hover .productOverlay {
 .newsletter {
   margin-top: 60px; }
   .newsletter .newsletterHeader {
-    max-width: 50%;
+    max-width: 80%;
     margin: 0 auto;
     text-align: center; }
 
@@ -969,6 +1079,10 @@ li:hover .productOverlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -983,13 +1097,13 @@ li:hover .productOverlay {
 /* MEDIA QUERIES */
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-  .plantTypesGallery img {
-    max-width: 90%; }
   .typesGalleryItem .galleryOverlay {
     width: 190px;
     height: 70px; }
   .productImageGroup {
     max-width: 90%; }
+  .popularProductsHeader {
+    max-width: 60%; }
   .popularProductsGallery ul {
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
@@ -1060,18 +1174,32 @@ li:hover .productOverlay {
   .plantTypesGallery {
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "air office"  "air house" "air container"; }
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "air air"  "office house" "container container"; }
   .typesGalleryItem:first-child {
     grid-area: air; }
+    .typesGalleryItem:first-child img {
+      height: 100%; }
   .typesGalleryItem:nth-child(2) {
     grid-area: office; }
   .typesGalleryItem:nth-child(3) {
     grid-area: house; }
   .typesGalleryItem:last-child {
     grid-area: container; }
-  .popularProductsHeader {
-    max-width: 50%; }
+  .popularProductsMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .featurettes {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1089,12 +1217,43 @@ li:hover .productOverlay {
   .customerTestimonials,
   .featuredVideo {
     width: 100%; }
+  .footerMain {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
   .footerServices,
   .footerAccount {
-    max-width: 50%; }
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #e6e5e1; }
+    .footerServices nav ul,
+    .footerAccount nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .footerServices nav ul li,
+      .footerAccount nav ul li {
+        width: 33%; }
   .footerInstagram {
-    max-width: 90%;
-    border-top: 1px solid #e6e5e1;
+    max-width: 100%;
+    margin: 0 auto;
+    border-top: 2px solid #e6e5e1;
     margin-top: 20px;
     padding-top: 10px; }
     .footerInstagram .instagramGallery {
@@ -1102,7 +1261,7 @@ li:hover .productOverlay {
       -ms-flex-pack: space-evenly;
       justify-content: space-evenly; }
       .footerInstagram .instagramGallery a {
-        margin: 8px; }
+        margin: 8px 15px; }
     .footerInstagram .creditCards {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1141,24 +1300,30 @@ li:hover .productOverlay {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .plantTypesGallery {
+  .mainMenu ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .mainMenu ul li {
+      margin: 10px; }
+  .popularProductsHeader {
+    max-width: 100%; }
+  .popularProductsMenu {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
-  .typesGalleryItem {
-    max-width: 320px;
-    max-height: 100px;
-    margin-bottom: 20px; }
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
   .blog .blogPosts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1194,6 +1359,35 @@ li:hover .productOverlay {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+  .footerServices,
+  .footerAccount {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #e6e5e1; }
+    .footerServices nav ul,
+    .footerAccount nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .footerServices nav ul li,
+      .footerAccount nav ul li {
+        width: 50%; }
   .footerFooter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1209,5 +1403,5 @@ li:hover .productOverlay {
     -ms-flex-align: center;
     align-items: center;
     text-align: center; }
-  .help {
-    padding: 20px 0; } }
+    .footerFooter div p {
+      padding-bottom: 15px; } }

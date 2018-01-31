@@ -95,6 +95,9 @@ a {
 
 .typesGalleryItem:first-child {
     grid-area: air;
+    img {
+        height: 100%;
+    }
 }
 
 .typesGalleryItem:nth-child(2) {
@@ -132,6 +135,13 @@ a {
     }
 }
 
+.galleryOverlay a {
+    transition: all 0.5s linear;
+    @include hover {
+        transform: scale(1.1);
+    }
+}
+
 
 
 // POPULAR PRODUCTS SECTION
@@ -149,6 +159,10 @@ a {
     justify-content: space-around;
         div {
             max-width: 33%;
+            margin-bottom: 15px;
+            @include hover {
+                border-bottom: 1px solid $primary;
+            }
         }
 }
 
@@ -196,7 +210,8 @@ a {
         }
 }
 
-li:hover .productOverlay {
+li:hover .productOverlay,
+li:focus .productOverlay {
     visibility: visible;
 }
 
@@ -325,9 +340,13 @@ li:hover .productOverlay {
         width: 80px;
         border-radius: 50%;
         background: $action;
+        transition: all 0.5s linear;
         @include flex;
         i {
             color: $tertiary;
+        }
+        @include hover {
+            transform: scale(1.2)
         }
     }
 
@@ -386,7 +405,7 @@ li:hover .productOverlay {
 .newsletter {
     margin-top: 60px;
     .newsletterHeader {
-        max-width: 50%;
+        max-width: 80%;
         margin: 0 auto;
         text-align: center;
         
@@ -424,9 +443,6 @@ li:hover .productOverlay {
 /* Portrait tablet and small desktops */
 
 @media (max-width: 940px) {
-    .plantTypesGallery img {
-        max-width: 90%;
-    }
 
     .typesGalleryItem .galleryOverlay {
         width: 190px;
@@ -437,6 +453,9 @@ li:hover .productOverlay {
         max-width: 90%;
     }
 
+    .popularProductsHeader {
+        max-width: 60%;
+    }
     .popularProductsGallery ul {
         justify-content: space-evenly;
     }
@@ -525,18 +544,22 @@ li:hover .productOverlay {
                 }
     }
 
+
     .plantTypesGallery {
         display: grid;
         grid-gap: 15px;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: 
-            "air office" 
-            "air house"
-            "air container";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         "air air" 
+         "office house"
+         "container container";
     }
 
     .typesGalleryItem:first-child {
         grid-area: air;
+        img {
+            height: 100%;
+        }
     }
 
     .typesGalleryItem:nth-child(2) {
@@ -551,8 +574,9 @@ li:hover .productOverlay {
         grid-area: container;
     }
 
-    .popularProductsHeader {
-        max-width: 50%;
+
+    .popularProductsMenu {
+        @include flexCol;
     }
 
     .featurettes {
@@ -564,21 +588,41 @@ li:hover .productOverlay {
         width: 100%;
     }
 
+    .footerMain {
+        justify-content: flex-start;
+    }
+
 
     .footerServices,
     .footerAccount {
-        max-width: 50%;
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border-top: 2px solid #e6e5e1;
+        nav ul {
+            @include flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li {
+                width: 33%;
+            }
+        }
     }
 
+
     .footerInstagram {
-        max-width: 90%;
-        border-top: 1px solid #e6e5e1;
+        max-width: 100%;
+        margin: 0 auto;
+        border-top: 2px solid #e6e5e1;
         margin-top: 20px;
         padding-top: 10px;
+        .footerHeading {
+            // margin-left: 3%;
+        }
         .instagramGallery {
             justify-content: space-evenly;
             a {
-                margin: 8px;
+                margin: 8px 15px;
             }
         }
         .creditCards {
@@ -603,36 +647,24 @@ li:hover .productOverlay {
     @include flexCol;
 }
 
-.plantTypesGallery {
-    @include flexCol;
-    // display: grid;
-    // grid-gap: 15px;
-    // grid-template-columns: 4fr 3fr 3fr;
-    // grid-template-areas: "air office house" "air container container";
+.mainMenu ul {
+    flex-wrap: wrap;
+    li {
+        margin: 10px;
+    }
 }
-.typesGalleryItem {
-    max-width: 320px;
-    max-height: 100px;
-    margin-bottom: 20px;
-
+.popularProductsHeader {
+    max-width: 100%;
 }
-// .typesGalleryItem:first-child {
-//     grid-area: air;
-// }
 
-// .typesGalleryItem:nth-child(2) {
-//     grid-area: office;
-// }
-
-// .typesGalleryItem:nth-child(3) {
-//     grid-area: house;
-// }
-
-// .typesGalleryItem:last-child {
-//     grid-area: container;
-// }
-
-    // blog
+ .popularProductsMenu {
+     width: 100%;
+     @include flex;
+     justify-content: space-around;
+    //  div {
+    //      margin: 0 10px;
+    //  }
+ }
 
 .blog .blogPosts {
     @include flexCol;
@@ -652,23 +684,38 @@ li:hover .productOverlay {
     visibility: visible;
 }
 
-    // Footer 
+   
 .footerMain {
     @include flexCol;
 }
 
-// .footerContact,
-// .footerServices,
-// .footerAccount,
-// .footerInstagram {
-//     max-width: 90%;
-// }
+.footerServices,
+.footerAccount {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #e6e5e1;
+    nav ul {
+        @include flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+            // margin-right: 0;
+        }
+        // li:nth-of-type(odd) {
+        //     margin-right: 80px;
+        // }
+    }
+}
 
 .footerFooter {
     @include flexCol;
     text-align: center;
+    div p {
+        padding-bottom: 15px;
+    }
 }
-.help {
-    padding: 20px 0;
-}
+
+
 }

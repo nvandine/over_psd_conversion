@@ -23,6 +23,9 @@ header {
 
 .mainMenu a {
     color: $primary;
+    @include hover {
+        color: $secondary;
+    }
 }
 
 .headerLogo {
@@ -39,6 +42,9 @@ header {
         margin-left: 30px;
         color: $primary;
         display: block;
+        @include hover {
+            color: $secondary;
+        }
     }
 }
 
@@ -85,17 +91,28 @@ header {
         color: $secondary; 
 }
 
+.heroArrows img {
+    transition: all 0.5s linear;
+    @include hover {
+        transform: scale(1.2);
+    }
+}
+
 .heroAction {
     background: $action;
     width: 180px;
     height: 60px;
     @include flex;
+    transition: all 0.5s linear;
     // margin-bottom: 28%;
     p {
         text-transform: uppercase;
         color: #ffffff;
         font-weight: 600;
         font-size: 1.6rem;
+    }
+    @include hover {
+        transform: scale(1.1);
     }
 }
 .carouselSlideIndicator {
