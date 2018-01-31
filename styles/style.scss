@@ -55,7 +55,7 @@ a {
 .aboutHeader {
     padding-top: 70px;
     .aboutTitle {
-    background-image: url("/images/plantBackground.png");
+    background-image: url("../images/plantBackground.png");
     background-repeat: no-repeat;
     background-position: center;
     padding: 0 0 50px 0;
@@ -257,7 +257,7 @@ li:focus .productOverlay {
 }
 
 .customerTestimonials {
-    background-image: url("/images/testimonialBackground.png");
+    background-image: url("../images/testimonialBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
     .testimonialText {
@@ -308,7 +308,7 @@ li:focus .productOverlay {
 }
 
 .featuredVideo {
-    background-image: linear-gradient(rgba(26, 26, 38, 0.5)), url("/images/plantStoreVideoStill.png")
+    background-image: linear-gradient(rgba(26, 26, 38, 0.5)), url("../images/plantStoreVideoStill.png")
     ;
     background-repeat: no-repeat;
     background-size: cover;
